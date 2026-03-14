@@ -6,56 +6,35 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { kitchenData } from "@/data/kitchenData";
+import { stairsData } from "@/data/stairCaseData";
 
-const projects = [
-  {
-    id: 1,
-    title: "Modern Kitchen with Island",
-    category: "kitchens",
-    image: "/kitchen/images/modernKitchen/modern-kitchen1.png",
-    description: "Clean lines, white cabinetry, and a central island",
-    link: "/kitchen/modern-design",
-  },
-  {
-    id: 2,
-    title: "Open-Plan Living & Kitchen",
-    category: "kitchens",
-    image: "/beforeafter/after2.png",
-    description: "Seamless flow, light wood flooring, finished staircase",
-    link: "/case-study/2",
-  },
-  {
-    id: 3,
-    title: "Luxury Kitchen Renovation",
-    category: "kitchens",
-    image: "/kitchen/images/kitchen2.jpeg",
-    description: "Premium cabinetry and stone countertops",
-    link: "/kitchen/renovation",
-  },
-  {
-    id: 4,
-    title: "Custom Staircase & Entry",
-    category: "stairs",
-    image: "/staircase/images/stairs.png",
-    description: "Refined treads, balusters, and cohesive entry",
-    link: "/stairs/custom-design",
-  },
-  {
-    id: 5,
-    title: "Staircase & Entry Refresh",
-    category: "stairs",
-    image: "/beforeafter/after6.png",
-    description: "Neutral walls, new flooring, updated lighting",
-    link: "/case-study/6",
-  },
-  {
-    id: 6,
-    title: "Stairwell & Hallway Transformation",
-    category: "stairs",
-    image: "/beforeafter/after3.png",
-    description: "Modern wooden stairs and clean finishes",
-    link: "/case-study/3",
-  },
+type Project = {
+  id: string;
+  title: string;
+  category: "kitchens" | "stairs";
+  image: string;
+  description: string;
+  link: string;
+};
+
+const projects: Project[] = [
+  ...Object.entries(kitchenData).map(([slug, d]) => ({
+    id: `kitchen:${slug}`,
+    title: d.title,
+    category: "kitchens" as const,
+    image: d.heroImage,
+    description: d.description,
+    link: `/kitchen/${slug}`,
+  })),
+  ...Object.entries(stairsData).map(([slug, d]) => ({
+    id: `stairs:${slug}`,
+    title: d.title,
+    category: "stairs" as const,
+    image: d.heroImage,
+    description: d.description,
+    link: `/stairs/${slug}`,
+  })),
 ];
 
 const filters = ["all", "kitchens", "stairs"];

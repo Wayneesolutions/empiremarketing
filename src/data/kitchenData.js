@@ -16,8 +16,6 @@ export const kitchenData = {
       "/kitchen/images/modernKitchen/modern-kitchen2.png",
       "/kitchen/images/modernKitchen/modern-kitchen3.png",
       "/kitchen/images/modernKitchen/modern-kitchen4.png",
-      "/kitchen/images/modernKitchen/modern-kitchen5.png",
-      "/kitchen/images/modernKitchen/modern-kitchen6.png",
     ],
     caseStudySummary: "From dated wood cabinets and broken counter space to white shaker cabinetry, a large island, and quartz counters. See the full transformation.",
     caseStudyId: 1,
