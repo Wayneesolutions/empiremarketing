@@ -22,19 +22,25 @@ const staircaseGalleryItems = [
   {
     title: "Floating Staircases",
     type: "image",
-    src: "/staircase/images/stairs6.webp",
+    src: "/staircase/images/stairs4.webp",
     link: "/stairs/floating-stairs",
   },
   {
     title: "Spiral Staircase Installation",
     type: "image",
-    src: "/staircase/images/stairs5.webp",
+    src: "/staircase/images/stairs6.webp",
     link: "/stairs/spiral-staircase",
+  },
+  {
+    title: "Balustrade & Handrail Systems",
+    type: "image",
+    src: "/staircase/images/stairs5.webp",
+    link: "/stairs/balustrade-handrail",
   },
   {
     title: "Staircase Renovation & Refinishing",
     type: "image",
-    src: "/staircase/images/stairs6.webp",
+    src: "/staircase/images/stairs7.webp",
     link: "/stairs/renovation",
   },
 ];

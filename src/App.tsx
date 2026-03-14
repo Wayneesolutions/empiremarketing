@@ -23,6 +23,7 @@ import WhatsAppWidget from "./components/WhatsAppWidget";
 import KitchenDetail from "./pages/KitchenDetail";
 import StairsDetail from "./pages/StairsDetail";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -81,6 +82,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <ScrollProgress />
         <AppRoutes />
         <StickyMobileCTA />
