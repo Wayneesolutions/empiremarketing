@@ -183,9 +183,9 @@ const ProductsDetail = () => {
 
 
 
-                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 mt-4 ">
+                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 mt-4  ">
 
-                    <div>
+                    <div className="">
                         {/* Main Image */}
                         <div className="overflow-hidden">
                             <img
@@ -196,7 +196,7 @@ const ProductsDetail = () => {
                         </div>
 
                         {/* Thumbnails */}
-                        <div className="flex gap-3 mt-4 justify-center ">
+                        <div className="flex gap-3 mt-9 justify-center ">
                             {images.slice(0, 4).map((img, index) => (
                                 <img
                                     key={index}
@@ -235,7 +235,7 @@ const ProductsDetail = () => {
                         <div className="w-16 h-[2px] bg-[#C9A646] mt-4"></div>
 
                         {/* Features */}
-                        <div className="mt-6">
+                        <div className="mt-4">
                             <h2 className="text-lg font-semibold text-gray-800 mb-2">
                                 Features
                             </h2>
@@ -247,7 +247,7 @@ const ProductsDetail = () => {
                         </div>
 
                         {/* Materials */}
-                        <div className="mt-6">
+                        <div className="mt-4">
                             <h2 className="text-lg font-semibold text-gray-800 mb-2">
                                 Materials Used
                             </h2>
@@ -257,7 +257,7 @@ const ProductsDetail = () => {
                         </div>
 
                         {/* Dimensions */}
-                        <div className="mt-6">
+                        <div className="mt-4">
                             <h2 className="text-lg font-semibold text-gray-800 mb-2">
                                 Dimensions
                             </h2>
@@ -267,7 +267,7 @@ const ProductsDetail = () => {
                         </div>
 
                         {/* Info Note */}
-                        <p className="mt-6 text-sm text-gray-500">
+                        <p className="mt-4 text-sm text-gray-500">
                             💬 For more details, click the WhatsApp icon below to connect with us instantly.
                         </p>
 
@@ -276,7 +276,7 @@ const ProductsDetail = () => {
                                 const url = `https://wa.me/1234567890?text=${encodeURIComponent(message)}`;
                                 window.open(url, "_blank");
                             }}
-                            className="mt-6 bg-[#C9A646] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#b8953c] transition"
+                            className="mt-4 bg-[#C9A646] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#b8953c] transition"
                         >
                             Enquire Now
                         </button>
