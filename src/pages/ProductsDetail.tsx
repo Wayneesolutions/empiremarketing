@@ -118,7 +118,9 @@ const ProductsDetail = () => {
 
 
     const item = productsData.find((d) => d.id === id);
-    const message = `Hi, I'm interested in "${item?.title}". Can you share more details?`;
+    const message = `Hi, I'm interested in "${item?.title}". Can you share more details? 
+      Link: ${window.location.origin}/products/${item?.id}'
+    `;
 
 
     if (!item) {
@@ -132,24 +134,18 @@ const ProductsDetail = () => {
         <>
             <Header />
             <HeroSection title={item.title} description={item.description} image={item.image} />
-            <div className="min-h-screen bg-gray-50 p-6">
+            <div className="min-h-screen bg-gray-50 p-10">
 
-                {/* Back Button */}
-                <button
-                    onClick={() => navigate(-1)}
-                    className="mb-6 text-blue-600 font-medium"
-                >
-                    ← Back
-                </button>
 
-                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+
+                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 mt-4">
 
                     {/* Image */}
-                    <div className="rounded-2xl overflow-hidden shadow-lg">
+                    <div className=" overflow-hidden">
                         <img
                             src={item.image}
                             alt={item.title}
-                            className="w-full h-[450px] object-cover hover:scale-105 transition duration-500"
+                            className="w-full h-[450px] rounded-2xl object-cover hover:scale-105 transition duration-500"
                         />
                     </div>
 

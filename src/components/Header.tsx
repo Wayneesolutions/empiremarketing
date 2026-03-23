@@ -13,6 +13,7 @@ const navItems = [
   { label: "Blog", path: "/blog" },
   { label: "FAQ", path: "/faq" },
   { label: "Contact", path: "/contact" },
+  { label: "Products", path: "/products" },
 ];
 
 const Header = () => {
@@ -42,8 +43,8 @@ const Header = () => {
                 key={item.path}
                 to={item.path}
                 className={`text-sm font-heading font-medium tracking-wide transition-colors hover:text-gold ${location.pathname === item.path
-                    ? "text-gold"
-                    : "text-warm-white/80"
+                  ? "text-gold"
+                  : "text-warm-white/80"
                   }`}
               >
                 {item.label}
@@ -90,8 +91,8 @@ const Header = () => {
                   to={item.path}
                   onClick={() => setIsOpen(false)}
                   className={`text-base font-heading font-medium tracking-wide py-2 transition-colors hover:text-gold ${location.pathname === item.path
-                      ? "text-gold"
-                      : "text-warm-white/80"
+                    ? "text-gold"
+                    : "text-warm-white/80"
                     }`}
                 >
                   {item.label}
