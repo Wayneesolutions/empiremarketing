@@ -92,7 +92,14 @@ const productsData = [
         ],
         materials: ["Teak Wood", "Oak"],
         dimensions: "Floor to floor 10 ft",
+        images: [
+            "/staircase/images/staircase-01.jpeg",
+            "/staircase/images/stairs4.webp",
+            "/staircase/images/stairs5.webp",
+            "/staircase/images/stairs6.webp",
+        ],
     },
+
     {
         id: "staircase-spiral",
         title: "Spiral Staircase",
@@ -109,6 +116,12 @@ const productsData = [
         ],
         materials: ["Steel", "Glass"],
         dimensions: "Diameter 5 ft",
+        images: [
+            "/staircase/images/staircase-01.jpeg",
+            "/staircase/images/stairs4.webp",
+            "/staircase/images/stairs5.webp",
+            "/staircase/images/stairs6.webp",
+        ],
     },
     {
         id: "staircase-glass",
@@ -126,6 +139,12 @@ const productsData = [
         ],
         materials: ["Glass", "Steel"],
         dimensions: "Floor height 11 ft",
+        images: [
+            "/staircase/images/staircase-01.jpeg",
+            "/staircase/images/stairs4.webp",
+            "/staircase/images/stairs5.webp",
+            "/staircase/images/stairs6.webp",
+        ],
     },
 ];
 
