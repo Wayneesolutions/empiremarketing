@@ -137,42 +137,80 @@ const ProductsDetail = () => {
                 {/* Back Button */}
                 <button
                     onClick={() => navigate(-1)}
-                    className="mb-4 text-blue-600 font-medium"
+                    className="mb-6 text-blue-600 font-medium"
                 >
                     ← Back
                 </button>
 
-                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
 
                     {/* Image */}
                     <div className="rounded-2xl overflow-hidden shadow-lg">
                         <img
                             src={item.image}
                             alt={item.title}
-                            className="w-full h-[400px] object-cover hover:scale-105 transition duration-500"
+                            className="w-full h-[450px] object-cover hover:scale-105 transition duration-500"
                         />
                     </div>
 
                     {/* Content */}
                     <div className="flex flex-col justify-center">
-                        <h1 className="text-3xl font-bold">{item.title}</h1>
 
+                        {/* Title */}
+                        <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
+                            {item.title}
+                        </h1>
+
+                        {/* Price */}
+                        <p className="mt-3 text-xl font-semibold text-[#C9A646]">
+                            {item.price}
+                        </p>
+
+                        {/* Description */}
                         <p className="mt-4 text-gray-600 leading-relaxed">
                             {item.description}
                         </p>
 
-                        {/* Features */}
-                        <ul className="mt-6 space-y-2 text-gray-700">
-                            <li>✔ Premium Quality Materials</li>
-                            <li>✔ Custom Design Options</li>
-                            <li>✔ Affordable Pricing</li>
-                            <li>✔ Professional Installation</li>
-                        </ul>
+                        {/* Divider */}
+                        <div className="w-16 h-[2px] bg-[#C9A646] mt-4"></div>
 
-                        {/* CTA */}
-                        <button className="mt-6 w-fit px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition">
-                            Get Quote
-                        </button>
+                        {/* Features */}
+                        <div className="mt-6">
+                            <h2 className="text-lg font-semibold text-gray-800 mb-2">
+                                Features
+                            </h2>
+                            <ul className="space-y-2 text-gray-700">
+                                {item.features.map((feature, index) => (
+                                    <li key={index}>✔ {feature}</li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Materials */}
+                        <div className="mt-6">
+                            <h2 className="text-lg font-semibold text-gray-800 mb-2">
+                                Materials Used
+                            </h2>
+                            <p className="text-gray-600">
+                                {item.materials.join(", ")}
+                            </p>
+                        </div>
+
+                        {/* Dimensions */}
+                        <div className="mt-6">
+                            <h2 className="text-lg font-semibold text-gray-800 mb-2">
+                                Dimensions
+                            </h2>
+                            <p className="text-gray-600">
+                                {item.dimensions}
+                            </p>
+                        </div>
+
+                        {/* Info Note */}
+                        <p className="mt-6 text-sm text-gray-500">
+                            💬 For more details, click the WhatsApp icon below to connect with us instantly.
+                        </p>
+
                     </div>
                 </div>
             </div>
