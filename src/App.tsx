@@ -80,6 +80,14 @@ const AppRoutes = () => {
   );
 };
 
+const WhatsAppWidgetHost = () => {
+  const { pathname } = useLocation();
+
+  if (/^\/products\/[^/]+$/.test(pathname)) return null;
+
+  return <WhatsAppWidget />;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -91,7 +99,7 @@ const App = () => (
         <AppRoutes />
         <StickyMobileCTA />
         <BackToTop />
-        <WhatsAppWidget />
+        <WhatsAppWidgetHost />
         <CookieConsent />
       </BrowserRouter>
     </TooltipProvider>

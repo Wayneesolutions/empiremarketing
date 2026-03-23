@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 
 
 interface Props {
-  message: string;
+  message?: string;
 }
 
 const WhatsAppWidget = ({ message }: Props) => {
