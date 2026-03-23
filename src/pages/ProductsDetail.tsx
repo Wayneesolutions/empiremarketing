@@ -23,6 +23,12 @@ const productsData = [
         ],
         materials: ["Plywood", "Laminate", "Granite"],
         dimensions: "10x8 ft",
+        images: [
+            "/kitchen/images/modernKitchen/modern-kitchen1.png",
+            "/kitchen/images/modernKitchen/modern-kitchen2.png",
+            "/kitchen/images/modernKitchen/modern-kitchen3.png",
+            "/kitchen/images/modernKitchen/modern-kitchen4.png",
+        ],
     },
     {
         id: "kitchen-luxury",
@@ -40,6 +46,12 @@ const productsData = [
         ],
         materials: ["Marble", "High-gloss laminate", "Steel"],
         dimensions: "12x10 ft",
+        images: [
+            "/kitchen/images/modernKitchen/modern-kitchen1.png",
+            "/kitchen/images/modernKitchen/modern-kitchen2.png",
+            "/kitchen/images/modernKitchen/modern-kitchen3.png",
+            "/kitchen/images/modernKitchen/modern-kitchen4.png",
+        ],
     },
     {
         id: "kitchen-compact",
@@ -57,6 +69,12 @@ const productsData = [
         ],
         materials: ["MDF", "Laminate"],
         dimensions: "8x6 ft",
+        images: [
+            "/kitchen/images/modernKitchen/modern-kitchen1.png",
+            "/kitchen/images/modernKitchen/modern-kitchen2.png",
+            "/kitchen/images/modernKitchen/modern-kitchen3.png",
+            "/kitchen/images/modernKitchen/modern-kitchen4.png",
+        ],
     },
     {
         id: "staircase-wooden",
@@ -111,6 +129,8 @@ const productsData = [
     },
 ];
 
+
+
 const ProductsDetail = () => {
 
     const { id } = useParams();
@@ -119,15 +139,21 @@ const ProductsDetail = () => {
 
     const item = productsData.find((d) => d.id === id);
     const message = `Hi, I'm interested in "${item?.title}". Can you share more details? 
-      Link: ${window.location.origin}/products/${item?.id}'
+      Link: ${window.location.origin}/products/${item?.id}
     `;
 
 
     if (!item) {
         return <h1 className="text-center mt-10">Product not found</h1>;
     }
+    const [selectedImage, setSelectedImage] = useState(item?.image)
 
-    console.log("message.................................", message)
+
+
+
+
+
+    const images = item?.images?.length ? item.images : [item.image];
 
 
     return (
@@ -138,19 +164,38 @@ const ProductsDetail = () => {
 
 
 
-                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 mt-4">
+                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 mt-4 ">
 
-                    {/* Image */}
-                    <div className=" overflow-hidden">
-                        <img
-                            src={item.image}
-                            alt={item.title}
-                            className="w-full h-[450px] rounded-2xl object-cover hover:scale-105 transition duration-500"
-                        />
+                    <div>
+                        {/* Main Image */}
+                        <div className="overflow-hidden">
+                            <img
+                                src={selectedImage}
+                                alt={item.title}
+                                className="w-full h-[450px] rounded-2xl object-cover transition duration-300"
+                            />
+                        </div>
+
+                        {/* Thumbnails */}
+                        <div className="flex gap-3 mt-4 justify-center ">
+                            {images.slice(0, 4).map((img, index) => (
+                                <img
+                                    key={index}
+                                    src={img}
+                                    alt={`thumb-${index}`}
+                                    onClick={() => setSelectedImage(img)}
+                                    className={`w-[24%] h-20 object-cover rounded-lg cursor-pointer border-2 
+                ${selectedImage === img ? "border-[#C9A646]" : "border-transparent"}
+                hover:scale-105 transition`}
+                                />
+                            ))}
+                        </div>
                     </div>
 
+
+
                     {/* Content */}
-                    <div className="flex flex-col justify-center">
+                    <div className="flex flex-col justify-center ">
 
                         {/* Title */}
                         <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
@@ -207,9 +252,19 @@ const ProductsDetail = () => {
                             💬 For more details, click the WhatsApp icon below to connect with us instantly.
                         </p>
 
+                        <button
+                            onClick={() => {
+                                const url = `https://wa.me/1234567890?text=${encodeURIComponent(message)}`;
+                                window.open(url, "_blank");
+                            }}
+                            className="mt-6 bg-[#C9A646] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#b8953c] transition"
+                        >
+                            Enquire Now
+                        </button>
+
                     </div>
-                </div>
-            </div>
+                </div >
+            </div >
             <Footer />
 
             {message && <WhatsAppWidget message={message} />}
