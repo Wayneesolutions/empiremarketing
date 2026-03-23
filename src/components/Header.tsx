@@ -41,11 +41,10 @@ const Header = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm font-heading font-medium tracking-wide transition-colors hover:text-gold ${
-                  location.pathname === item.path
+                className={`text-sm font-heading font-medium tracking-wide transition-colors hover:text-gold ${location.pathname === item.path
                     ? "text-gold"
                     : "text-warm-white/80"
-                }`}
+                  }`}
               >
                 {item.label}
               </Link>
@@ -90,11 +89,10 @@ const Header = () => {
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`text-base font-heading font-medium tracking-wide py-2 transition-colors hover:text-gold ${
-                    location.pathname === item.path
+                  className={`text-base font-heading font-medium tracking-wide py-2 transition-colors hover:text-gold ${location.pathname === item.path
                       ? "text-gold"
                       : "text-warm-white/80"
-                  }`}
+                    }`}
                 >
                   {item.label}
                 </Link>

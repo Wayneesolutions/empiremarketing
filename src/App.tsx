@@ -24,6 +24,8 @@ import KitchenDetail from "./pages/KitchenDetail";
 import StairsDetail from "./pages/StairsDetail";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
 import ScrollToTop from "./components/ScrollToTop";
+import Products from "./pages/Products";
+import ProductDetail from "./pages/ProductsDetail";
 
 const queryClient = new QueryClient();
 
@@ -67,9 +69,11 @@ const AppRoutes = () => {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/kitchen/:slug" element={<KitchenDetail/>}/>
-          <Route path="/stairs/:slug" element={<StairsDetail/>}/>
+          <Route path="/kitchen/:slug" element={<KitchenDetail />} />
+          <Route path="/stairs/:slug" element={<StairsDetail />} />
           <Route path="/case-study/:id" element={<CaseStudyDetail />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<ProductDetail />} />
         </Routes>
       </motion.div>
     </AnimatePresence>
@@ -91,7 +95,10 @@ const App = () => (
         <CookieConsent />
       </BrowserRouter>
     </TooltipProvider>
+
+
   </QueryClientProvider>
+
 );
 
 export default App;
