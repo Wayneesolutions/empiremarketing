@@ -70,12 +70,12 @@ const Blog = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        <section className="pt-32 pb-20 bg-charcoal">
+        <section className="pt-24 pb-14 bg-charcoal">
           <div className="container mx-auto px-4 lg:px-8">
             <Breadcrumbs items={[{ label: "Blog" }]} />
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
               <span className="font-heading text-xs tracking-[0.4em] uppercase text-gold">Resources</span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-warm-white mt-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-warm-white mt-4">
                 Blog & <span className="text-gradient-gold">Insights</span>
               </h1>
               <p className="text-warm-white/60 text-lg mt-4">Tips, trends, and guides for your home renovation journey.</p>

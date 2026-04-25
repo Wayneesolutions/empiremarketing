@@ -7,40 +7,40 @@ import GalleryGrid from "@/components/GalleryGrid";
 
 const galleryItems = [
   {
-    title: "Modern Kitchen Design",
-    type: "image",
-    src: "/kitchen/images/modernKitchen/modern-kitchen1.png",
-    link: "/kitchen/modern-design",
-  },
-  {
-    title: "Luxury Cabinet Installation",
+    title: "Maple Kitchen Renovation, Burlington",
     type: "video",
-    src: "/kitchen/videos/kitchen1.mp4",
-    link: "/kitchen/cabinet-installation",
+    src: "https://res.cloudinary.com/dxn9c9m1m/video/upload/v1776671898/WhatsApp_Video_2026-03-09_at_2.48.19_PM_vwb71c.mp4",
+    link: "/kitchen/maple-kitchen-burlington",
   },
   {
-    title: "Elegant Kitchen Island",
-    type: "image",
-    src: "/kitchen/images/kitchen2.jpeg",
-    link: "/kitchen/kitchen-island",
-  },
-  {
-    title: "Premium Marble & Stone Countertops",
+    title: "Dynes Kitchen Renovation, Burlington",
     type: "video",
-    src: "/kitchen/videos/kitchen2.mp4",
-    link: "/kitchen/marble-countertops",
+    src: "https://res.cloudinary.com/dxn9c9m1m/video/upload/v1776671867/WhatsApp_Video_2026-03-09_at_2.48.18_PM_xbvcne.mp4",
+    link: "/kitchen/dynes-kitchen-burlington",
   },
   {
-    title: "Minimalist Cabinet Design",
+    title: "Clearview Kitchen Renovation, Oakville",
     type: "image",
-    src: "/kitchen/images/kitchen3.jpeg",
-    link: "/kitchen/minimal-cabinets",
+    src: "/beforeafter/after3.png",
+    link: "/kitchen/clearview-kitchen-oakville",
   },
   {
-    title: "Complete Kitchen Renovation",
+    title: "Lakeview Kitchen Remodel, Mississauga",
     type: "video",
-    src: "/kitchen/videos/kitchen3.mp4",
-    link: "/kitchen/renovation",
+    src: "https://res.cloudinary.com/dxn9c9m1m/video/upload/v1776671506/WhatsApp_Video_2026-03-09_at_2.48.17_PM_vrvvv5.mp4",
+    link: "/kitchen/lakeview-kitchen-mississauga",
+  },
+  {
+    title: "Modern Kitchen Design, Toronto",
+    type: "video",
+    src: "https://res.cloudinary.com/dxn9c9m1m/video/upload/v1776671435/WhatsApp_Video_2026-03-09_at_2.48.16_PM_lj1ln1.mp4",
+    link: "/kitchen/modern-kitchen-toronto",
+  },
+  {
+    title: "Custom Cabinet Install, Hamilton",
+    type: "image",
+    src: "/beforeafter/afterk3.webp",
+    link: "/kitchen/custom-cabinet-hamilton",
   },
 ];
 
@@ -51,7 +51,7 @@ const ServiceKitchens = () => {
     <div className="min-h-screen">
       <Header />
 
-      <section className="pt-32 pb-24 bg-charcoal relative overflow-hidden">
+      <section className="pt-24 pb-16 bg-charcoal relative overflow-hidden">
         <motion.div
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
@@ -64,7 +64,7 @@ const ServiceKitchens = () => {
             className="w-full h-full object-cover"
           />
         </motion.div>
-        <div className="absolute inset-0 bg-charcoal/80" />
+        <div className="absolute inset-0 bg-black/80" />
         <motion.div
           animate={{ y: [0, -25, 0] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
@@ -80,7 +80,7 @@ const ServiceKitchens = () => {
             <span className="font-heading text-xs uppercase text-gold tracking-[0.4em]">
               Kitchen Solutions
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-warm-white mt-4 mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-warm-white mt-4 mb-6">
               Custom Kitchen{" "}
               <span className="text-gradient-gold relative inline-block overflow-hidden">
                 Cabinets & Design
@@ -100,15 +100,15 @@ const ServiceKitchens = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-background">
+      <div className="bg-background pt-12 pb-0">
         <div className="container mx-auto px-4 lg:px-8">
           <p className="font-heading text-xs tracking-[0.35em] uppercase text-gold text-center mb-2">Portfolio</p>
-          <h2 className="font-heading font-bold text-foreground text-2xl md:text-3xl text-center mb-12">
+          <h2 className="font-heading font-bold text-foreground text-2xl md:text-3xl text-center mb-0">
             Kitchen Projects
           </h2>
-          <GalleryGrid items={galleryItems} onItemClick={(item: { link: string }) => navigate(item.link)} />
         </div>
-      </section>
+        <GalleryGrid items={galleryItems} onItemClick={(item: { link: string }) => navigate(item.link)} />
+      </div>
 
       <Footer />
     </div>

@@ -65,7 +65,7 @@ const GalleryGrid = ({ items, onItemClick }) => {
               )}
 
               {/* Overlay: heading on hover, click opens case study page */}
-              <div className="absolute inset-0 bg-charcoal/70 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center p-4">
+              <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center p-4">
                 <h3 className="font-heading text-warm-white text-xl font-semibold text-center transform translate-y-4 group-hover:translate-y-0 transition duration-300">
                   {item.title}
                 </h3>

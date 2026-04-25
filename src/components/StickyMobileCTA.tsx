@@ -19,7 +19,7 @@ const StickyMobileCTA = () => {
           initial={{ y: 80 }}
           animate={{ y: 0 }}
           exit={{ y: 80 }}
-          className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-charcoal/95 backdrop-blur-md border-t border-gold/20 p-3"
+          className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-[#014631]/95 backdrop-blur-md border-t border-gold/20 p-3"
         >
           <div className="flex gap-3">
             <a

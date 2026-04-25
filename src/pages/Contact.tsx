@@ -43,11 +43,11 @@ const Contact = () => {
       <Header />
       <main>
         {/* Hero */}
-        <section className="pt-32 pb-20 bg-charcoal">
+        <section className="pt-24 pb-14 bg-charcoal">
           <div className="container mx-auto px-4 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
               <span className="font-heading text-xs tracking-[0.4em] uppercase text-gold">Get In Touch</span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-warm-white mt-4 mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-warm-white mt-4 mb-6">
                 Book Your Free{" "}
                 <span className="text-gradient-gold">Consultation</span>
               </h1>

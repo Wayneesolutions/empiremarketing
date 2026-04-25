@@ -27,11 +27,11 @@ const About = () => {
       <Header />
       <main>
         {/* Hero */}
-        <section className="pt-32 pb-20 bg-charcoal">
+        <section className="pt-24 pb-14 bg-charcoal">
           <div className="container mx-auto px-4 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
               <span className="font-heading text-xs tracking-[0.4em] uppercase text-gold">About Us</span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-warm-white mt-4 mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-warm-white mt-4 mb-6">
                 Craftsmanship That{" "}
                 <span className="text-gradient-gold">Speaks Volumes</span>
               </h1>
@@ -114,7 +114,7 @@ const About = () => {
                       alt={`${member.name} - ${member.role} at Empire Stairs & Kitchens`}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <h3 className="font-heading font-semibold text-foreground text-lg">{member.name}</h3>
                   <p className="text-gold text-sm font-heading font-medium mt-1">{member.role}</p>

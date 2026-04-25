@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = ({ title, description, image, label = "Portfolio" }) => {
   return (
-    <section className="pt-32 pb-24 bg-charcoal relative overflow-hidden">
+    <section className="pt-24 pb-16 bg-charcoal relative overflow-hidden">
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-charcoal/90" />
@@ -30,7 +30,7 @@ const HeroSection = ({ title, description, image, label = "Portfolio" }) => {
               {label}
             </span>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-warm-white mt-4 mb-6 leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-warm-white mt-4 mb-6 leading-tight">
               {title}
             </h1>
 

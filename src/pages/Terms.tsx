@@ -7,7 +7,7 @@ const Terms = () => (
   <div className="min-h-screen">
     <Header />
     <main>
-      <section className="pt-32 pb-10 bg-charcoal">
+      <section className="pt-24 pb-8 bg-charcoal">
         <div className="container mx-auto px-4 lg:px-8">
           <Breadcrumbs items={[{ label: "Terms & Conditions" }]} />
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-4xl md:text-5xl font-heading font-bold text-warm-white">

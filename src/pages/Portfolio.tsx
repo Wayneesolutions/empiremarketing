@@ -47,12 +47,12 @@ const Portfolio = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        <section className="pt-32 pb-20 bg-charcoal">
+        <section className="pt-24 pb-14 bg-charcoal">
           <div className="container mx-auto px-4 lg:px-8">
             <Breadcrumbs items={[{ label: "Portfolio" }]} />
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
               <span className="font-heading text-xs tracking-[0.4em] uppercase text-gold">Our Work</span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-warm-white mt-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-warm-white mt-4">
                 Project <span className="text-gradient-gold">Portfolio</span>
               </h1>
             </motion.div>
@@ -95,7 +95,7 @@ const Portfolio = () => {
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
-                    <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/70 transition-all duration-300 flex items-end">
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-all duration-300 flex items-end">
                       <div className="p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                         <h3 className="font-heading font-semibold text-warm-white text-lg">{project.title}</h3>
                         <p className="text-warm-white/60 text-sm mt-1">{project.description}</p>

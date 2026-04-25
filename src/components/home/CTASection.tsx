@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const CTASection = () => {
   return (
-    <section className="py-24 bg-charcoal relative overflow-hidden">
+    <section className="py-16 bg-charcoal relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-gold/5 blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-gold/5 blur-3xl translate-x-1/2 translate-y-1/2" />
@@ -17,7 +17,7 @@ const CTASection = () => {
           viewport={{ once: true }}
           className="text-center max-w-2xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-warm-white mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-warm-white mb-4">
             Ready to Transform{" "}
             <span className="text-gradient-gold">Your Space?</span>
           </h2>

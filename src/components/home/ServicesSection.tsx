@@ -23,16 +23,16 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-16 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <span className="font-heading text-xs tracking-[0.4em] uppercase text-gold">Our Services</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mt-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground mt-3">
             What We <span className="text-gradient-gold">Specialize In</span>
           </h2>
         </motion.div>
@@ -54,7 +54,7 @@ const ServicesSection = () => {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <h3 className="text-2xl md:text-3xl font-heading font-bold text-warm-white mb-3">
                     {service.title}

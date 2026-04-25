@@ -10,16 +10,16 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-16 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <span className="font-heading text-xs tracking-[0.4em] uppercase text-gold">Our Process</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mt-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground mt-3">
             How It <span className="text-gradient-gold">Works</span>
           </h2>
         </motion.div>

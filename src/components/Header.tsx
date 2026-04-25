@@ -21,19 +21,16 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-charcoal/95 backdrop-blur-md border-b border-gold/10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#014631]/95 backdrop-blur-md border-b border-gold/20">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="flex flex-col">
-              <span className="text-xl font-heading font-bold tracking-wider text-warm-white">
-                EMPIRE
-              </span>
-              <span className="text-[10px] font-heading tracking-[0.3em] text-gold uppercase -mt-1">
-                Stairs & Kitchens
-              </span>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img
+              src="/Empire_Final_Logo.png"
+              alt="Empire Stairs & Kitchens"
+              className="h-14 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -82,7 +79,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-charcoal border-t border-gold/10"
+            className="lg:hidden bg-[#014631] border-t border-gold/10"
           >
             <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
               {navItems.map((item) => (

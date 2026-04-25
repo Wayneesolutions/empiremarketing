@@ -31,7 +31,7 @@ const CaseStudyDetail = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <main className="pt-32 md:pt-36 pb-0">
+      <main className="pt-24 md:pt-28 pb-0">
         <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
           {/* Page title */}
           <motion.div

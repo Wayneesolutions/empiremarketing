@@ -5,7 +5,7 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-kitchen.jpg";
 
-const HERO_VIDEO_SRC = "/kitchen/videos/kitchen1.mp4";
+const HERO_VIDEO_SRC = "https://res.cloudinary.com/dxn9c9m1m/video/upload/v1776671506/WhatsApp_Video_2026-03-09_at_2.48.17_PM_vrvvv5.mp4";
 
 const HeroSection = () => {
   return (
@@ -43,7 +43,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="text-4xl md:text-5xl lg:text-7xl font-heading font-bold text-warm-white leading-[1.1] mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-warm-white leading-[1.1] mb-5"
           >
             Custom Kitchens & Stairs{" "}
             <span className="text-gradient-gold">Designed to Elevate</span>{" "}
@@ -54,7 +54,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="text-lg md:text-xl text-warm-white/70 mb-10 max-w-xl font-light leading-relaxed"
+            className="text-base md:text-lg text-warm-white/70 mb-8 max-w-xl font-light leading-relaxed"
           >
             Premium craftsmanship. Seamless installation. Designed around you.
           </motion.p>
@@ -88,22 +88,22 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex gap-12 mt-16 pt-8 border-t border-warm-white/10"
+            className="flex gap-10 mt-10 pt-6 border-t border-warm-white/10"
           >
             <div>
-              <p className="text-2xl md:text-3xl font-heading font-bold text-gold">
+              <p className="text-xl md:text-2xl font-heading font-bold text-gold">
                 <AnimatedCounter end={500} suffix="+" />
               </p>
               <p className="text-xs text-warm-white/50 tracking-wider uppercase mt-1">Projects Completed</p>
             </div>
             <div>
-              <p className="text-2xl md:text-3xl font-heading font-bold text-gold">
+              <p className="text-xl md:text-2xl font-heading font-bold text-gold">
                 <AnimatedCounter end={15} suffix="+" />
               </p>
               <p className="text-xs text-warm-white/50 tracking-wider uppercase mt-1">Years Experience</p>
             </div>
             <div>
-              <p className="text-2xl md:text-3xl font-heading font-bold text-gold">
+              <p className="text-xl md:text-2xl font-heading font-bold text-gold">
                 <AnimatedCounter end={100} suffix="%" />
               </p>
               <p className="text-xs text-warm-white/50 tracking-wider uppercase mt-1">Client Satisfaction</p>
